@@ -1,0 +1,30 @@
+#wynagrodzenie z brutto do netto#
+x = 0.0976
+y = 0.0150
+z = 0.0245
+przych = 250
+dochodowy = 0.17
+
+
+print("Cześć, jestem prostym programem liczacym wynagrodzenie oraz jego składowe")
+print("podaj swoje wynagrodzenie Netto, obliczę Ci ile kradnie państwo")
+
+pensjaBrutto = int(input("Kwota brutto : "))
+
+emerytalna = (pensjaBrutto*x)
+rentowe = (pensjaBrutto*y)
+chorobowa = (pensjaBrutto*z)
+spoleczne = emerytalna + rentowe + chorobowa
+zdrowotna = (pensjaBrutto - (spoleczne)) *0.09
+
+podstawa = pensjaBrutto - spoleczne - przych
+
+dochodowy = podstawa * dochodowy
+Netto = pensjaBrutto - spoleczne - dochodowy
+print(emerytalna)
+print(rentowe)
+print(chorobowa)
+print(zdrowotna)
+print(spoleczne)
+print(dochodowy)
+print(Netto)
